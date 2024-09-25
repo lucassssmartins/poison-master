@@ -1,0 +1,15 @@
+rootProject.name = 'PoisonMC'
+
+// Cores
+include 'core'
+include 'core-proxy'
+include 'core-bukkit'
+
+// Mains
+include 'login'
+include 'lobby'
+
+// Games
+include 'pvp'
+include 'duels'
+

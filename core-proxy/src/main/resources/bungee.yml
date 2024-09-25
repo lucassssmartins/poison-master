@@ -1,0 +1,4 @@
+name: Core
+author: Cássio Martim
+version: 1.0.0
+main: br.com.poison.core.proxy.ProxyCore

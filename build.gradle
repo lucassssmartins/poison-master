@@ -1,0 +1,19 @@
+subprojects {
+    apply plugin: 'java'
+
+    group 'br.com.poison'
+    version '1.0.0-SNAPSHOT'
+
+    compileJava.options.encoding('UTF-8')
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        def lombok = 'org.projectlombok:lombok:1.18.30'
+
+        compileOnly(lombok)
+        annotationProcessor(lombok)
+    }
+}

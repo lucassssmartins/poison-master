@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+dependencies {
+    implementation project(':core')
+
+    compileOnly('redis.clients:jedis:5.1.0')
+
+    compileOnly files('../libs/Zartema.jar')
+}
+
+tasks.register('copyJar', Copy) {
+    dependsOn(jar)
+
+    from 'build/libs/core-proxy-1.0.0-SNAPSHOT.jar'
+    into 'C:/Servers/PoisonMC/proxy/plugins'
+}
+
+jar {
+    exclude 'META-INF/*.RSA', 'META-INF/*.SF', 'META-INF/*.DSA'
+    duplicatesStrategy(DuplicatesStrategy.EXCLUDE)
+
+    from { configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
+}

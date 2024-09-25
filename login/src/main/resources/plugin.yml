@@ -1,0 +1,4 @@
+name: Auth
+author: Cássio Martim
+version: 1.0.0
+main: br.com.poison.auth.Auth

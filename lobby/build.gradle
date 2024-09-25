@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+dependencies {
+    implementation project(':core')
+    implementation project(':core-bukkit')
+
+    compileOnly('redis.clients:jedis:5.1.0')
+
+    compileOnly files('../libs/pandaspigot-server-1.8.8-R0.1-SNAPSHOT.jar')
+    compileOnly files('../libs/SlimeWorldManager.jar')
+}
+
+tasks.register('copyJar', Copy) {
+    dependsOn(jar)
+
+    from 'build/libs/lobby-1.0.0-SNAPSHOT.jar'
+    into 'C:/Servers/PoisonMC/hub/plugins'
+}
+
+jar {
+    duplicatesStrategy(DuplicatesStrategy.EXCLUDE)
+
+    from { configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
+}

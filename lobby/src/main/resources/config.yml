@@ -1,0 +1,15 @@
+# Lista de lobbies do servidor.
+
+modes:
+  Hub:
+    min: 2
+    max: 2
+    directory: hub
+  Duels:
+    min: 2
+    max: 2
+    directory: duels
+  PvP:
+    min: 2
+    max: 2
+    directory: pvp

@@ -1,0 +1,6 @@
+name: Duels
+author: Cássio Martim
+version: 1.0.0
+main: br.com.poison.arcade.duels.Duels
+depend:
+  - SlimeWorldManager

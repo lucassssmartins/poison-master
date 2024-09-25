@@ -1,0 +1,25 @@
+Games:
+  Simulator:
+    directory: simulator
+    min_arenas: 5
+    max_arenas: 5
+  Gladiator:
+    directory: gladiator
+    min_arenas: 5
+    max_arenas: 5
+  UHC:
+    directory: uhc
+    min_arenas: 5
+    max_arenas: 5
+  NoDebuff:
+    directory: nodebuff
+    min_arenas: 5
+    max_arenas: 5
+  Soup:
+    directory: soup
+    min_arenas: 5
+    max_arenas: 5
+  Sumo:
+    directory: sumo
+    min_arenas: 5
+    max_arenas: 5
